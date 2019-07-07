@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ChatService } from "../services/chat.service";
+import { WebSocketService } from "../services/web-socket.service";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,7 +14,10 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    ChatService,
+    WebSocketService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
